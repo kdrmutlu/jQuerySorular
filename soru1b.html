@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Soru 1-b</title>
+    <meta charset="utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
+    <script>
+
+        $(function(){
+            $( "div#first, div.first, ol#items").css("color","blue");
+        });
+         
+    </script>
+</head>
+<body>
+    divlerin id'si ve class'ı first olanların ve ol etiketinde id'si items olanlar etkilenir.<br /><br />
+    <div id="first">div#first</div>
+    <div class="first">div.first</div>
+    <ol id="items">
+        <li>item1</li>
+        <li>item2</li>
+    </ol>
+    <div>div</div>
+    <p class="first">deneme</p>
+</body>
+</html>
