@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Soru 5</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        
+        $(function(){
+            var s1,s2;
+            $("#btnTest").click(function(){
+                console.log(s1);
+                s1=parseInt($("#txt1").val());
+                s2=parseInt($("#txt2").val());
+                $("#txt1").val(s2*s2*s2);
+                $("#txt2").val(s1*s1*s1);
+                });
+        });
+         
+    </script>
+</head>
+<body>
+
+<table class="table table-hover">
+    <tr>
+        <td><input type="text" id="txt1" class="form-control" /></td>
+    </tr>
+    <tr>
+        <td><input type="text" id="txt2" class="form-control" /></td>
+    </tr>
+    <tr>
+        <td><button id="btnTest" class="form-control btn-primary">Küp Hesapla</button></td>
+    </tr>
+</table>
+
+</body>
+</html>
