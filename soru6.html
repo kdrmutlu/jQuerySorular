@@ -9,9 +9,10 @@
     <script>
         
         $(function(){
-            $("body").on("click","tr",function(){
-                $(this).css("background-color", "red").toggle(3000,function(){
-                    $("table").append("<tr><td>6</td><td>deneme</td><tr>");
+            $(document.body).on("click","tr",function(){
+                $(this).css("background-color", "red").fadeOut(3000,function(){
+                    $(this).remove();
+                    $("table").append("<tr><td>No</td><td>deneme</td><tr>");
                 });
             });
         });
