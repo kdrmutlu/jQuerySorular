@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Soru 3</title>
+    <title>Soru 4</title>
     <meta charset="utf-8" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"> </script>
     <script>
 
         $(function(){
-            $("button#btnTest").click(function(){
-                $("#div2").html($("#div1").html());
+            $("a").attr({
+                "href":"http://www.diziger.com/",
+                "title":"Diziger"
             });
         });
          
     </script>
 </head>
 <body>
-    <div id="div1"><p>deneme </b>kalın</b> yazı</div>
-    <div id="div2"></div>
-    <button id="btnTest">Klonla</button>
+    <a id= "a1" target="_blank">Diziger</a>
 </body>
 </html>
