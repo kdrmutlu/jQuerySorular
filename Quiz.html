@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Soru 6</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        
+        $(function(){
+            $("input").keyup(function(){
+                var sonuc = 0;
+                $("input").each(function(){
+                    if ($(this).attr("islem") == "topla"){
+                        var deger = parseFloat($(this).val());
+                        sonuc += deger;
+                    }
+                    else if($(this).attr("islem") == "carp"){
+                        var deger = parseFloat($(this).val());
+                        sonuc *= deger;
+                    }
+                });
+
+                $("#sonuc").text(sonuc);
+                if (sonuc>1000)
+                    $("#sonuc").css("color", "red");
+                else
+                    $("#sonuc").css("color", "black");
+            });
+        });
+         
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Sayı1</label>
+                <input type="text" islem="topla" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Sayı2</label>
+                <input type="text" islem="topla" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Sayı3</label>
+                <input type="text" islem="carp" class="form-control" />
+            </div>
+        <form>
+        <div class="container">
+            <div class="col-md-6 com-sm-6 col-xs-12">Sonuç:</div>
+            <div class="col-md-6 com-sm-6 col-xs-12" id="sonuc">0</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Soru 6</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        
+        $(function(){
+            $("#mesajBlogu").hide();
+            $("#gonder").click(function(){
+                $(".form-control").each(function(){
+                    if ($(this).attr("dogrulama") == "bosDegil")
+                    {
+                        var deger = $(this).val();
+                        if(deger = null || deger == ""){
+                            $("#isim").css("color", "red");
+                            $("#mesajIcerik").text("İsim değeri boş olamaz.");
+                            $("#mesajBlogu").show();
+                        }
+                        else{
+                            $("#isim").css("color", "black");
+                            $("#mesajIcerik").text("");
+                            $("#mesajBlogu").hide();
+                        }
+                    }
+
+                });
+            });
+        });
+         
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form class="frm">
+            <div class="form-group">
+                <label id="isim">İsim</label>
+                <input type="text" class="form-control" dogrulama="bosDegil" />
+            </div>
+            <div class="form-group">
+                <label id="yas">Yaş</label>
+                <input type="text" class="form-control" />
+            </div>
+        </form>
+        <button id="gonder" class="btn btn-primary">Gönder</button>
+
+        <div class="container" id="mesajBlogu">
+            <div class="col-md-6 com-sm-6 col-xs-12" id="mesajBaslik">Mesaj:</div>
+            <div class="col-md-6 com-sm-6 col-xs-12" id="mesajIcerik">0</div>
+        </div>
+    </div>
+</body>
+</html>
