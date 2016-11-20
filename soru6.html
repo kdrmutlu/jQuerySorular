@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Soru 5</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        
+        $(function(){
+            $("body").on("click","tr",function(){
+                $(this).css("background-color", "red").toggle(3000,function(){
+                    $("table").append("<tr><td>6</td><td>deneme</td><tr>");
+                });
+            });
+        });
+         
+    </script>
+</head>
+<body>
+    
+    <table class="table table-hover">
+            <tr>
+                <td>1</td>
+                <td><a href="https://www.diziger.com" target="_blank" >diziger.com</a></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><a href="https://www.ahmeturganci.com" target="_blank" >ahmeturganci.com</a></td>
+            </tr>
+             <tr>
+                <td>3</td>
+                <td><a href="https://www.kadirsefaunal.com" target="_blank" >kadirsefaunal.com</a></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><a href="https://www.nuriuzunoglu.com" target="_blank" >nuriuzunoglu.com</a></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><a href="https://meg.pwsturk.com" target="_blank" >meg.pwsturk.com</a></td>
+            </tr>
+    </table>
+    
+</body>
+</html>
